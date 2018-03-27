@@ -58,6 +58,7 @@ ru = {
 
 'creation_date':			r'\ncreated:\s*(.+)',
 'expiration_date':			r'\npaid-till:\s*(.+)',
+'updated_date':				r'\nLast updated on\s*(.+)\n',
 
 'name_servers':				r'\nnserver:\s*(.+)',
 'status':					r'\nstate:\s*(.+)',
