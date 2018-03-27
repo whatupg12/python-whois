@@ -265,3 +265,12 @@ br = {
     'name_servers':             r'nserver:\s*(.+)',
     'status':                   r'status:\s?(.+)',
 }
+
+ma = {
+    'extend': 'com',
+    'registrar':				r'Registrar:\s?(.+)',
+    'registrant':				r'Registrant Name:\s?(.+)',
+    'expiration_date':			r'\nRegistry Expiry Date:\s?(.+)',
+    'status':					r'Domain Status:\s?(.+)',
+    'updated_date':				r'Updated Date:\s?(.+)',
+}
