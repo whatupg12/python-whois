@@ -310,4 +310,19 @@ roots = {
         'expiration_date':          r'expire-date:\s?(.+)',
         'updated_date':             r'last-updated:\s?(.+)',
     },
+
+    'tw': {
+        'extend': 'com',
+
+        'creation_date':            r'Record created on (.+) \(YYYY-MM-DD\)',
+        'expiration_date':          r'Record expires on (.+) \(YYYY-MM-DD\)',
+    },
+
+    'hk': {
+        'extend': 'com',
+
+        'creation_date':            r'Domain Name Commencement Date:\s?(.+)',
+        'expiration_date':          r'Expiry Date:\s?(.+)\s*',
+    },
+
 }
