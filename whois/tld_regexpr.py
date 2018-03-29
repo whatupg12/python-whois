@@ -7,7 +7,7 @@ com = {
 
 'creation_date':			r'Creation Date:\s?(.+)',
 'expiration_date':			r'Expiration Date:\s?(.+)',
-'updated_date':				r'Updated Date:\s?(.+)$',
+'updated_date':				r'Updated Date:\s?(.+)',
 
 'name_servers':				r'Name Server:\s*(.+)\s*',
 'status':					r'Status:\s?(.+)',
@@ -58,7 +58,7 @@ ru = {
 
 'creation_date':			r'\ncreated:\s*(.+)',
 'expiration_date':			r'\npaid-till:\s*(.+)',
-'updated_date':				r'\nLast updated on\s*(.+)\n',
+'updated_date':				r'\nLast updated on\s*(.+)',
 
 'name_servers':				r'\nnserver:\s*(.+)',
 'status':					r'\nstate:\s*(.+)',
@@ -273,5 +273,9 @@ ma = {
     'registrant':				r'Registrant Name:\s?(.+)',
     'expiration_date':			r'\nRegistry Expiry Date:\s?(.+)',
     'status':					r'Domain Status:\s?(.+)',
-    'updated_date':				r'Updated Date:\s?(.+)',
+}
+
+tv = {
+    'extend': 'com',
+    'expiration_date':			r'Registry Expiry Date:\s?(.+)',
 }
