@@ -9,6 +9,6 @@ if __name__ == '__main__':
         sys.exit(-1)
 
     domain = sys.argv[1]
-    results = whois.query(domain, ignore_returncode=1)
+    results = whois.query(domain, ignore_returncode=1, use_com_for_default_tld=1)
 
     pprint.pprint(results.__dict__)

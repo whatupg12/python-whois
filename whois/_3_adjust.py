@@ -49,7 +49,7 @@ DATE_FORMATS = [
 	'%Y-%m-%d %H:%M:%S',		    # 2011-09-08 14:44:51
 	'%d.%m.%Y  %H:%M:%S',			# 19.09.2002 13:00:00
 	'%d-%b-%Y %H:%M:%S %Z',			# 24-Jul-2009 13:20:03 UTC
-	'%Y/%m/%d %H:%M:%S (%z)',		# 2011/06/01 01:05:01 (+0900)
+	'%Y/%m/%d %H:%M:%S \(%z\)',		# 2011/06/01 01:05:01 (+0900)
 	'%Y/%m/%d %H:%M:%S',			# 2011/06/01 01:05:01
 	'%a %b %d %H:%M:%S %Z %Y',		# Tue Jun 21 23:59:59 GMT 2011
 	'%a %b %d %Y',					# Tue Dec 12 2000
@@ -85,10 +85,11 @@ def str_to_date(s):
 
 
 def str_to_date_py2(s):
-	tmp = re.findall('\+([0-9]{2})00', s)
-	if tmp: 
-		dstr=s[:-5]
-		tz = int(tmp[0])
+	tmp = list(re.finditer('\s+\(\+([0-9]{2})00\)', s))
+	if len(tmp) > 0:
+		tmp = tmp[0]
+		dstr=s[:tmp.start(0)]
+		tz = int(s[tmp.start(1):tmp.end(1)])
 	else: 
 		dstr=s
 		tz = 0

@@ -42,6 +42,7 @@ google.fr
 
 dfsdfsfsdf
 test.ez.lv
+ozmall.co.jp
 '''
 
 #domains = ''

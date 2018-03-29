@@ -27,7 +27,7 @@ CACHE_FILE = None
 SLOW_DOWN = 0
 
 
-def query(domain, force=0, cache_file=None, slow_down=0, ignore_returncode=0):
+def query(domain, force=0, cache_file=None, slow_down=0, ignore_returncode=0, use_com_for_default_tld=0):
 	"""
 		force=1				<bool>		Don't use cache.
 		cache_file=<path>	<str>		Use file to store cache not only memory.
@@ -45,7 +45,7 @@ def query(domain, force=0, cache_file=None, slow_down=0, ignore_returncode=0):
 	elif domain.endswith('.xn--p1ai'): tld = 'ru_rf'
 	else: tld = d[-1]
 
-	if tld not in TLD_RE.keys(): raise Exception('Unknown TLD: %s\n(all known TLD: %s)' % (tld, list(TLD_RE.keys())))
+	if use_com_for_default_tld == 0 and tld not in TLD_RE: raise Exception('Unknown TLD: %s\n(all known TLD: %s)' % (tld, list(TLD_RE.keys())))
 
 	while 1:
 		pd = do_parse(do_query(d, force, cache_file, slow_down, ignore_returncode), tld)
