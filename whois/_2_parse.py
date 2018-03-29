@@ -1,11 +1,11 @@
-from . import tld_regexpr
+from .tld_regexpr import roots
 import re
 
 
 TLD_RE = {}
 def get_tld_re(tld):
 	if tld in TLD_RE: return TLD_RE[tld]
-	v = getattr(tld_regexpr, tld)
+	v = roots[tld]
 	extend = v.get('extend')
 	if extend:
 		e = get_tld_re(extend)
@@ -20,7 +20,7 @@ def get_tld_re(tld):
 	return TLD_RE[tld]
 
 
-[get_tld_re(tld) for tld in dir(tld_regexpr) if tld[0] != '_']
+[get_tld_re(tld) for tld in roots.keys() if tld[0] != '_']
 
 
 #from pprint import pprint
