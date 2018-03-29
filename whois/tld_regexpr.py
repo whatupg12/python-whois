@@ -180,9 +180,9 @@ roots = {
     'me': {
         'extend': 'biz',
 
-        'creation_date':			r'Domain Create Date:\s?(.+)',
-        'expiration_date':			r'Domain Expiration Date:\s?(.+)',
-        'updated_date':				r'Domain Last Updated Date:\s?(.+)',
+        'creation_date':			r'Creation Date:\s?(.+)',
+        'expiration_date':			r'Expiry Date:\s?(.+)',
+        'updated_date':				r'Updated Date:\s?(.+)',
 
         'name_servers':				r'Nameservers:\s?(.+)',
         'status':					r'Domain Status:\s?(.+)',
