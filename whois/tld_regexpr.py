@@ -302,4 +302,12 @@ roots = {
 
         'updated_date':             r'Last Modified:\s+(.*)\n',
     },
+
+    'ir': {
+        'extend': 'br',
+        'domain_name':              r'domain:\s?(.+)',
+        'creation_date':            None,
+        'expiration_date':          r'expire-date:\s?(.+)',
+        'updated_date':             r'last-updated:\s?(.+)',
+    },
 }
