@@ -295,5 +295,11 @@ roots = {
 
         'creation_date':            r'Created On:\s*(.+)\s*',
         'updated_date':             r'Last Updated On:\s*(.+)\s*',
-    }
+    },
+
+    'qa': {
+        'extend': 'com',
+
+        'updated_date':             r'Last Modified:\s+(.*)\n',
+    },
 }
