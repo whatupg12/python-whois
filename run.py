@@ -11,4 +11,7 @@ if __name__ == '__main__':
     domain = sys.argv[1]
     results = whois.query(domain, ignore_returncode=1, use_com_for_default_tld=1)
 
-    pprint.pprint(results.__dict__)
+    if results:
+        pprint.pprint(results.__dict__)
+    else:
+        print "None"

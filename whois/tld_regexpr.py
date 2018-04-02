@@ -325,4 +325,13 @@ roots = {
         'expiration_date':          r'Expiry Date:\s?(.+)\s*',
     },
 
+    'th': {
+        'extend': 'com',
+
+        'domain_name':              r'Domain:\s*(.+)\s*',
+        'creation_date':            r'Created date:\s*(.+)\s*',
+        'expiration_date':          r'Exp date:\s*(.+)\s*',
+        'updated_date':             r'Updated date:\s*(.+)\s*',
+    },
+
 }
