@@ -7,9 +7,9 @@ roots = {
         'registrar':				r'Registrar:\s?(.+)',
         'registrant':				None,
 
-        'creation_date':			r'Creation Date:\s?(.+)',
-        'expiration_date':			r'Expiration Date:\s?(.+)',
-        'updated_date':				r'Updated Date:\s?(.+)',
+        'creation_date':			r'Creation Date:\s*(.+)\s*',
+        'expiration_date':			r'Expiration Date:\s*(.+)\s*',
+        'updated_date':				r'Updated Date:\s*(.+)\s*',
 
         'name_servers':				r'Name Server:\s*(.+)\s*',
         'status':					r'Status:\s?(.+)',
@@ -23,9 +23,9 @@ roots = {
     'org': {
         'extend': 'com',
 
-        'creation_date':			r'\nCreated On:\s?(.+)',
+        'creation_date':			r'\nCreated On:\s*(.+)\s*',
         'expiration_date':			r'\nRegistry Expiry Date:\s?(.+)',
-        'updated_date':				r'\nLast Updated On:\s?(.+)',
+        'updated_date':				r'\nLast Updated On:\s*(.+)\s*',
 
         'name_servers':				r'Name Server:\s?(.+)\s*',
     },
@@ -343,6 +343,20 @@ roots = {
 
         'creation_date':            r'Created on\.+:\s*(.+)\.',
         'expiration_date':          r'Expires on\.+:\s*(.+)\.',
+    },
+
+    'mx': {
+        'extend': 'com',
+
+        'creation_date':			r'Created On:\s*(.+)\s*',
+        'updated_date':				r'Last Updated On:\s*(.+)\s*',
+    },
+
+    'ch': {
+        'extend': 'com',
+
+        'creation_date':			r'First registration date:\s*(.+)\s*',
+        'name_servers':				r'Name servers:\s*(.+)(?:\s*(.+)(?:\s*(.+)(?:\s*(.+)(?:\s*(.+))?)?)?)?',
     },
 
 }
