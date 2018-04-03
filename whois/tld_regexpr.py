@@ -303,6 +303,10 @@ roots = {
         'updated_date':             r'Last Modified:\s+(.*)\n',
     },
 
+    'om': {
+        'extend': 'qa',
+    },
+
     'ir': {
         'extend': 'br',
         'domain_name':              r'domain:\s?(.+)',
@@ -332,6 +336,13 @@ roots = {
         'creation_date':            r'Created date:\s*(.+)\s*',
         'expiration_date':          r'Exp date:\s*(.+)\s*',
         'updated_date':             r'Updated date:\s*(.+)\s*',
+    },
+
+    'tr': {
+        'extend': 'com',
+
+        'creation_date':            r'Created on\.+:\s*(.+)\.',
+        'expiration_date':          r'Expires on\.+:\s*(.+)\.',
     },
 
 }
