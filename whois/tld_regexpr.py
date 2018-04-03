@@ -144,9 +144,9 @@ roots = {
         'registrar':				r'Sponsoring Registrar:\s?(.+)',
         'registrant':				r'Registrant Organization:\s?(.+)',
 
-        'creation_date':			r'Domain Registration Date:\s?(.+)',
-        'expiration_date':			r'Domain Expiration Date:\s?(.+)',
-        'updated_date':				r'Domain Last Updated Date:\s?(.+)',
+        'creation_date':			r'Creation Date:\s*(.+)\s*',
+        'expiration_date':			r'Registry Expiry Date:\s*(.+)\s*',
+        'updated_date':				r'Updated Date:\s*(.+)\s*',
 
         'status':					None,
     },
@@ -375,5 +375,12 @@ roots = {
         'expiration_date':          r'expires\.+:\s*(.+)\s*',
         'updated_date':				r'modified\.+:\s*(.+)\s*',
     },
+
+    'cn': {
+        'extend': 'com',
+
+        'creation_date':            r'Registration Time:\s*(.+)\s*',
+        'expiration_date':          r'Expiration Time:\s*(.+)\s*',
+    }
 
 }
