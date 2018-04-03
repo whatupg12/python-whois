@@ -359,4 +359,12 @@ roots = {
         'name_servers':				r'Name servers:\s*(.+)(?:\s*(.+)(?:\s*(.+)(?:\s*(.+)(?:\s*(.+))?)?)?)?',
     },
 
+    'dk': {
+        'extend': 'com',
+
+        'domain_name':              r'Domain:\s*(.+)\s*',
+        'creation_date':            r'Registered:\s*(.+)\s*',
+        'expiration_date':          r'Expires:\s*(.+)\s*',
+    },
+
 }
