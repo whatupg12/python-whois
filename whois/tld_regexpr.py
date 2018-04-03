@@ -100,9 +100,9 @@ roots = {
         'registrar':				None,
         'registrant':				r'\[Registrant\]\s?(.+)',
 
-        'creation_date':			r'\[Created on\]\s?(.+)',
-        'expiration_date':			r'\[Expires on\]\s?(.+)',
-        'updated_date':				r'\[Last Updated\]\s?(.+)',
+        'creation_date':			r'\[Created on\]\s*(.+)\n',
+        'expiration_date':			r'\[Expires on\]\s*(.+)\n',
+        'updated_date':				r'\[Last Update\]\s*(.+)\n',
 
         'name_servers':				r'\[Name Server\]\s*(.+)',
         'status':					r'\[Status\]\s?(.+)',
@@ -114,7 +114,6 @@ roots = {
 
         'creation_date':			r'\[Registered Date\]\s?(.+)',
         'expiration_date':			r'\[State\].+\((.+)\)',
-        'updated_date':				r'\[Last Update\]\s?(.+)',
     },
 
     'de': {
