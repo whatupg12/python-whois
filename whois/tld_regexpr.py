@@ -399,4 +399,12 @@ roots = {
         'name_servers':				r'Nameserver:\s*(.+)\s*',
     },
 
+    'id': {
+        'extend': 'com',
+
+        'creation_date':			r'Created On:(.+)\s*',
+        'expiration_date':			r'Expiration Date:(.+)\s*',
+        'updated_date':				r'Last Updated On:(.+)\s*',
+    },
+
 }
