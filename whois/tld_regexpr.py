@@ -381,6 +381,13 @@ roots = {
 
         'creation_date':            r'Registration Time:\s*(.+)\s*',
         'expiration_date':          r'Expiration Time:\s*(.+)\s*',
-    }
+    },
+
+    'rs': {
+        'extend': 'com',
+
+        'creation_date':            r'Registration date:\s*(.+)\s*',
+        'updated_date':				r'Modification date:\s*(.+)\s*',
+    },
 
 }
