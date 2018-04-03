@@ -390,4 +390,14 @@ roots = {
         'updated_date':				r'Modification date:\s*(.+)\s*',
     },
 
+    'sk': {
+        'extend': 'cz',
+
+        'creation_date':			r'Created:\s*(.+)\s*',
+        'expiration_date':			r'Valid Until:\s*(.+)\s*',
+        'updated_date':				r'Updated:\s*(.+)\s*',
+
+        'name_servers':				r'Nameserver:\s*(.+)\s*',
+    },
+
 }
