@@ -430,4 +430,14 @@ roots = {
         'name_servers':             r'nserver:\s*(.+)',
     },
 
+    'cl': {
+        'extend': 'com',
+
+        'domain_name':              r'(.+):\s*',
+        'creation_date':            None,
+        'expiration_date':          r'\(Expiration date\):\s*(.+)\s*',
+        'updated_date':				None,
+        'name_servers':             r'\(Domain servers\):\s*(.+)(?:\s*\(\d+\.\d+\.\d+\.\d+\)\s*)?\s*(?:(.+)\s*)?',
+    },
+
 }
