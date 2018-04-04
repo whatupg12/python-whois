@@ -420,4 +420,14 @@ roots = {
         'updated_date':				r'modified:\s*(.+)\s*',
     },
 
+    'il': {
+        'extend': 'com',
+
+        'domain_name':              r'domain:\s*(.+)\s*',
+        'creation_date':            r'validity:\s*(.+)\s*',
+        'expiration_date':          None,
+        'updated_date':				None,
+        'name_servers':             r'nserver:\s*(.+)',
+    },
+
 }
