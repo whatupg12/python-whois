@@ -88,7 +88,7 @@ def str_to_date(s):
 
 
 def str_to_date_py2(s):
-	tmp = list(re.finditer('\s+\(\+([0-9]{2})00\)', s))
+	tmp = list(re.finditer('(?:\s+\()?\+([0-9]{2})(?:00\))?', s))
 	if len(tmp) > 0:
 		tmp = tmp[0]
 		dstr=s[:tmp.start(0)]

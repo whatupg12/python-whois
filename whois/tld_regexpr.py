@@ -407,4 +407,13 @@ roots = {
         'updated_date':				r'Last Updated On:(.+)\s*',
     },
 
+    'ua': {
+        'extend': 'com',
+
+        'domain_name':              r'domain:\s*(.+)\s*',
+        'creation_date':            r'created:\s*(.+)\s*',
+        'expiration_date':          r'expires:\s*(.+)\s*',
+        'updated_date':				r'modified:\s*(.+)\s*',
+    },
+
 }
